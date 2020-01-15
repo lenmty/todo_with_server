@@ -1,0 +1,213 @@
+@font-face {
+    font-family: "icomoon";
+    src: url("fonts/icomoon.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;    
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-size: 24px;
+}
+
+.my-tasks-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-tasks-header > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.my-tasks-header a {
+    text-decoration: none;
+    margin-left: 2px;
+    min-width: 55px;
+    padding: 5px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.my-tasks-header a:hover,
+.my-tasks-header a:target {
+    background-color: lavender;
+    border-radius: 6px;
+}
+
+.list-group-item {
+    z-index: 0 !important;
+}
+
+.list-group-item__input {
+    position: relative;
+}
+
+.list-group-item__input .arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #dad3d3;
+    font-size: 16px;
+    font-family: "icomoon" !important;
+    font-weight: bold;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.list-group-item__input .arrow_down:before {
+    content: "\ea3e";
+}
+
+.list-group-item__input .arrow_up:before {
+    content: "\ea3a";
+}
+
+.list-group-item__input .input-subtask {
+    display: none;
+    width: 90%;
+}
+
+.view .input-subtask {
+    display: block;
+}
+
+.list-group-item__subtasks {
+    margin-left: 50px;
+    width: 90%;
+    opacity: 1;
+    height: auto;
+    transition: all 0.8s ease-in-out;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.list-group-item__subtasks.marker {
+    opacity: 0;
+    height: 0;
+}
+
+.list-group-item__subtasks .subtask {
+    z-index: 10;
+}
+
+.list-group-item__out {
+    position: relative;
+    padding: 15px 15px 15px 50px;
+    cursor: pointer;
+}
+
+.list-group-item__inside {
+    display: none;
+    width: 85%;
+}
+
+.edit .list-group-item__out {
+    display: none;
+}
+
+.edit .list-group-item__inside {
+    display: block;
+    margin: 15px 15px 15px 50px;
+}
+
+.list-group-item__out input:not(checked) {
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+}
+
+.list-group-item__out input:not(checked) + .checkbox:before {
+    content: "";
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    border-radius: 6px;
+    border: 2px solid #a7a7a7;
+}
+
+.list-group-item__out input:checked + .checkbox:before {
+    font-family: "icomoon" !important;
+    line-height: 1;
+    content: "\ea10";
+    color: green;
+}
+
+.list-group-item__out .close {
+    position: absolute;
+    top: 23px;
+    right: 30px;
+    width: 28px;
+    height: 28px;
+    font-weight: normal;
+}
+
+.list-group-item__out .close:before {
+    font-family: "icomoon" !important;
+    content: "\ea0f";
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.list-group-item__out .close:hover:before {
+    opacity: 1;
+}
+
+.list-group-item__out .completed {
+    opacity: 0.5;
+}
+
+.list-group-item__out .completed + span {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.list-group-item__out .marker {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #dad3d3;
+    font-size: 16px;
+    font-family: "icomoon" !important;
+    z-index: 1;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.list-group-item__out .minus:before {
+    content: "\ea0b";
+}
+
+.list-group-item__out .plus:before {
+    content: "\ea0a";
+}
+
+.clear-all-done {
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0.5;
+    font-size: 1rem;
+}
+
+.clear-all-done:active {
+    opacity: 0.3;
+}

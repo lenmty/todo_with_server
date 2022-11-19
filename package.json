@@ -16,7 +16,7 @@
     "react-dom": "^16.12.0",
     "socket.io": "^2.3.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
@@ -28,7 +28,7 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.3.2",
     "file-loader": "^5.0.2",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "jest-cli": "^24.9.0",
